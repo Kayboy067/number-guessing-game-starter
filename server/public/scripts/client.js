@@ -49,9 +49,10 @@ function refresh() {
 
       if (response.winner !== '') {
         alert(`Congrats ${response.winner}`);
-        $('#kayTable tbody').empty();
-        $('#jamesTable tbody').empty();
-        $('#dezTable tbody').empty();
+        // $('#kayTable tbody').empty();
+        // $('#jamesTable tbody').empty();
+        // $('#dezTable tbody').empty();
+        $('#newGameNotify').text('Please Start A New Game');
       } 
       // console.log(response.round);
       $('#roundCountVal').text(response.round);
@@ -60,6 +61,8 @@ function refresh() {
 }
 
 function render(guessHistory) {
+  $('#newGameNotify').text('');
+
   $('#kayTable tbody').empty();
   $('#jamesTable tbody').empty();
   $('#dezTable tbody').empty();
@@ -104,7 +107,7 @@ function render(guessHistory) {
 
   }
 
-  
+
 }
   //duplicate for other group members
   // $('#kayTable tbody').empty();
